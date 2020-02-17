@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-function Home() {
-  return (
-    <div>
-      <h2>This is the home page</h2>
-    </div>
-  )
+export class Home extends Component {
+  constructor() {
+    super();
+    this.state = {
+      modules: ['Journal']
+    }
+  }
+  
+  render() {
+    return (
+      <div>
+        <h2>This is the home page</h2>
+      </div>
+    )
+  }  
 }
 
 export default Home;
