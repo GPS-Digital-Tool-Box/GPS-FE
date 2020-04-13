@@ -1,11 +1,20 @@
 import React from 'react';
+import modules from '../../modules';
+import { Link } from 'react-router-dom';
 
-function Header() {
+export const Header = () => {
+  const modulesToShow = Object.keys(modules);
+  const menuItems = modulesToShow.map(module => {
+    return <li><Link to={`/`}>{modules[module].name}</Link></li>
+  })
   return (
-    <div>
+    <div className="header-wrapper">
       <h1>Welcome to GPS</h1>
+      <div className="menu"> 
+        <ul>
+          {menuItems}
+        </ul>
+      </div>
     </div>
   );
-}
-
-export default Header;
+};
