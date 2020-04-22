@@ -8,6 +8,11 @@ const modules = {
     name: 'Safety Plan',
     slug: 'safety_plan',
     description: 'This is a space for you to make a safety plan'
+  },
+  Home: {
+    name: 'Home',
+    slug: 'home',
+    description: 'Home page'
   }
 }
 

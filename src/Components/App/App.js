@@ -45,7 +45,7 @@ class App extends Component{
     <div className="App">
       <Route path='/' component={Header} />
       <Switch>
-        <Route path='/' exact component = { this.pageToShow } />
+        <Route path='/home' exact component = { this.pageToShow } />
         <Route path='/journal' component={Journal} />
         <Route path='/safety_plan' component={SafetyPlan} />
       </Switch>

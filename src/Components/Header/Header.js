@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export const Header = () => {
   const modulesToShow = Object.keys(modules);
   const menuItems = modulesToShow.map(module => {
-    return <li><Link to={`/`}>{modules[module].name}</Link></li>
+    return <li><Link to={`/${modules[module].slug}`}>{modules[module].name}</Link></li>
   })
   return (
     <div className="header-wrapper">
@@ -14,6 +14,9 @@ export const Header = () => {
         <ul>
           {menuItems}
         </ul>
+        <div className="escape">
+          <a href="http://www.google.com"> Quick Escape</a>
+        </div>
       </div>
     </div>
   );
